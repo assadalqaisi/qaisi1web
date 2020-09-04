@@ -186,23 +186,23 @@ function displayToc(filter) {
    var tocHead3 = 'الأقسام';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
-      tocTool1 += ' (descending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (تنازلي)';
+      tocTool2 += ' (الأحدث أولاً)';
    }
    if (sortBy == "titledesc") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (تنازلي)';
+      tocTool2 += ' (الأحدث أولاً)';
    }
    if (sortBy == "dateoldest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (newest first)';
+      tocTool1 += ' (تنازلي)';
+      tocTool2 += ' (الأحدث أولاً)';
    }
    if (sortBy == "datenewest") { 
-      tocTool1 += ' (ascending)';
-      tocTool2 += ' (oldest first)';
+      tocTool1 += ' (تنازلي)';
+      tocTool2 += ' (الأقدم أولا)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Click to show all posts';
+      tocTool3 = ' انقر لإظهار جميع المقالات';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -232,8 +232,8 @@ function displayToc(filter) {
    if (numDisplayed == postTitle.length) {
       var tocNote = '<span class="toc-note">عرض ' + postTitle.length + ' مقال<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
-      tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
+      var tocNote = '<span class="toc-note">عرض ' + numDisplayed + ' مقال من قسم \'';
+      tocNote += postFilter + '\' من اصل '+ postTitle.length + ' مقال في الموقع كامل<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
